@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script>
+    let count = 0;
+  </script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>HTML은</h1>
+
+    <h2>문서에 대한</h2>
+
+    <h3>통일된 구조를</h3>
+
+    <h4>제공합니다.</h4>
+
+    <div style="color: red">그리고 CSS는</div>
+
+    <br />
+
+    <div style="background-color: blue; color: cornsilk">
+      스타일을 입혀 줍니다.
+    </div>
+
+    <br />
+
+    <!-- make button that append div below button -->
+    <button
+      onclick="
+      var div = document.createElement('div');
+      if (count ===0) {
+        div.innerHTML = '이 문서를 조작할 수 있는데요';
+      } else if (count === 1) {
+        div.innerHTML = 'DOM의 인터페이스를 사용하면';
+      } else if (count === 2) {
+        div.innerHTML = 'HTML을 자유자재로';
+      } else if (count === 3) {
+        div.innerHTML = '변경할 수 있습니다.';
+      }
+      count++;
+
+      document.body.appendChild(div);
+    "
+    >
+      JS는 말이죠
+    </button>
+
+    <br />
+  </body>
+</html>
